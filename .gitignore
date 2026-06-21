@@ -1,0 +1,39 @@
+# Local/private portfolio material
+raw/
+private/
+transcripts/
+recordings/
+videos/
+*.mp4
+*.mov
+*.wav
+*.m4a
+
+# Secrets and environment files
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*secret*
+*Secret*
+*token*
+*Token*
+
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+.vs/
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+__pycache__/
+*.pyc
