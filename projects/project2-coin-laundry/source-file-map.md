@@ -6,9 +6,9 @@ Project2 코드 파일별 공개 가능 여부와 자소서/면접 활용 가능
 
 ## 명칭 기준
 
-- 현재 repo 기준 canonical name 후보: `Coin Laundry`.
-- 현재 문서 위치: `projects/project2-coin-survivor/`.
-- 이 경로는 `projects/project2-coin-laundry/` rename 승인 전 임시 위치다.
+- 현재 repo 기준 canonical name: `Coin Laundry`.
+- 현재 문서 위치: `projects/project2-coin-laundry/`.
+- 외부 공개 포트폴리오 근거는 `portfolio/02-coin-laundry/`에 둔다.
 
 ## Source File Map
 

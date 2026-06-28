@@ -9,8 +9,8 @@
 - 팀 프로젝트 1.
 - 사용자 제공 키워드: 뱀파이어 서바이벌, 인벤토리, 상점.
 - 기존 공개 근거 위치: `portfolio/02-coin-laundry/`.
-- 현재 repo 기준 canonical name 후보: `Coin Laundry`.
-- 현재 폴더 경로 `projects/project2-coin-survivor/`는 rename 승인 전 임시 경로로 둔다.
+- 현재 repo 기준 canonical name: `Coin Laundry`.
+- 내부 working area 위치: `projects/project2-coin-laundry/`.
 
 ## 직접 구현 근거
 
@@ -23,7 +23,7 @@
 ## 확인 필요
 
 - TODO: 프로젝트 정식명, 기간, 팀 규모, 담당 역할.
-- TODO: `projects/project2-coin-survivor/`를 `projects/project2-coin-laundry/`로 rename할지 사용자 승인.
+- TODO: survivor-like / 뱀파이어 서바이벌류 장르 설명이 필요한지 확인.
 
 ## 자소서 활용 가능 포인트
 

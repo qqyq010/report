@@ -65,7 +65,7 @@ claim 정리는 `projects/`, 전체 취업 포지셔닝은 `career/`, 원본 파
 | --- | --- |
 | `career/` | 지원 포지셔닝, 자소서 소재, 면접 키워드, 주장 경계 |
 | `projects/project1-escape-room/` | 개인 프로젝트 근거 정리 |
-| `projects/project2-coin-survivor/` | 팀 프로젝트 1 근거 정리. 현재 경로명은 임시이며 Project2 canonical name 후보는 `Coin Laundry` |
+| `projects/project2-coin-laundry/` | 팀 프로젝트 1 `Coin Laundry` 자소서/면접용 working area |
 | `projects/project3-fisher/` | 팀 프로젝트 2 / Project3 Fisher 근거 정리 |
 
 ## Project 분류 기준
@@ -73,7 +73,7 @@ claim 정리는 `projects/`, 전체 취업 포지셔닝은 `career/`, 원본 파
 | Project | 현재 기준 |
 | --- | --- |
 | Project1 | EscapeRoom 개인 프로젝트로 추정되는 자료를 받을 예정입니다. 기존 `portfolio/01-escape-room/` 공개 코드가 있으나 직접 구현/검증 범위는 문서별로 확인해 연결합니다. |
-| Project2 | `Coin Laundry`를 canonical name 후보로 둡니다. 현재 `projects/project2-coin-survivor/` 경로는 rename 승인 전 임시 경로이며, Inventory / Shop / UI / EventBus / 디버깅 / 검증 근거를 받을 예정입니다. |
+| Project2 | `Coin Laundry`를 canonical name으로 둡니다. 내부 working area는 `projects/project2-coin-laundry/`이며, Inventory / Shop / UI / EventBus / 디버깅 / 검증 근거를 받을 예정입니다. |
 | Project3 | Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인 / 검증 문서 근거를 받을 예정입니다. 완성 게임 포트폴리오가 아니라 작업 방식, 검증, 문서화, 툴링 태도의 보조 근거로 다룹니다. |
 
 ## Public Scope

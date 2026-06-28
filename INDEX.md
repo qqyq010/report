@@ -41,7 +41,7 @@ It is a routing document for evidence, not a finished resume, self-introduction,
 ## Project Evidence
 
 - [Project 1 - Escape Room](projects/project1-escape-room/summary.md): 개인 프로젝트 근거 정리
-- [Project 2 - Coin Laundry](projects/project2-coin-survivor/summary.md): 팀 프로젝트 1 근거 정리. 현재 링크 경로는 rename 승인 전 임시 `project2-coin-survivor` 경로
+- [Project 2 - Coin Laundry](projects/project2-coin-laundry/summary.md): 팀 프로젝트 1 근거 정리
 - [Project 3 - Fisher](projects/project3-fisher/summary.md): 팀 프로젝트 2 / Project3 보조 근거 정리
 
 ## Project 분류 기준
@@ -49,7 +49,7 @@ It is a routing document for evidence, not a finished resume, self-introduction,
 | Project | 직접 구현 후보 | 팀 결과물 / 협업 기여 | 확인 필요 | 과장 위험 |
 | --- | --- | --- | --- | --- |
 | Project1 | EscapeRoom, 퍼즐, 잠입 요소 | 개인 프로젝트라 팀 기여는 기본적으로 해당 없음 | 기존 `portfolio/01-escape-room/` 코드와 실제 직접 구현 범위 연결 | 근거 없이 전체 게임 완성도나 모든 시스템 구현 주장 |
-| Project2 | Coin Laundry, Inventory, Shop, UI, EventBus, 디버깅 | 팀 프로젝트 1 결과물 중 본인 담당 범위 | `projects/project2-coin-survivor/` 경로를 `projects/project2-coin-laundry/`로 rename할지 사용자 승인 필요 | 팀 전체 성과를 개인 구현처럼 표현 |
+| Project2 | Coin Laundry, Inventory, Shop, UI, EventBus, 디버깅 | 팀 프로젝트 1 결과물 중 본인 담당 범위 | 실제 자료 투입 전 직접 구현/팀 결과물/검증 수준 확인 | 팀 전체 성과를 개인 구현처럼 표현 |
 | Project3 | Fisher, CSH, 밸런스, CloudScript, UI 아트 파이프라인 검증 문서 | 팀 프로젝트 2의 협업/검증/문서화/툴링 기여 | 직접 구현, 문서상 설계, 실제 실행 검증 분리 | 완성 게임 포트폴리오 또는 메인 프로젝트처럼 과장 |
 
 ## 확인 필요
