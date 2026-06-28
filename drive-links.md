@@ -17,6 +17,13 @@ Drive는 원본 보관소이고, GitHub는 공개 가능한 요약과 근거 연
 
 GitHub에는 Drive 원본을 복사하지 않고 링크와 요약만 둔다.
 
+## 다른 폴더와의 역할 경계
+
+- `portfolio/`: 외부 공개 가능한 정제 설명과 sanitized evidence.
+- `projects/`: 자소서/면접용 내부 claim 정리와 코드 근거 투입 대기.
+- `career/`: 프로젝트별 근거를 이력서, 자소서, 면접 소재로 변환하는 상위 정리.
+- Drive `center`: 원본 문서, PPT, PDF, 영상, 이미지, 압축파일 보관.
+
 ## 분류 기준
 
 | 분류 | Drive에 둘 자료 | GitHub에 둘 자료 |

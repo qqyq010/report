@@ -15,8 +15,20 @@ It is a routing document for evidence, not a finished resume, self-introduction,
 ## Core Documents
 
 - [Repository README](README.md): repo 운영 기준과 공개 범위
+- [Portfolio / projects role map](portfolio-projects-role-map.md): `portfolio/`, `projects/`, `career/`, Drive 역할 분리
 - [Drive links](drive-links.md): 원본 자료 보관 위치
 - [Security redaction checklist](security-redaction-checklist.md): 공개 전 제거 항목
+
+## 저장 위치 기준
+
+| 위치 | 사용 기준 |
+| --- | --- |
+| `portfolio/` | 외부 공개 가능한 정제 설명과 sanitized evidence |
+| `projects/` | 자소서/면접용 내부 claim 정리와 근거 투입 대기 |
+| `career/` | 프로젝트별 근거를 지원 포지셔닝과 자소서/면접 소재로 변환 |
+| Drive `center` | 원본 문서, PPT, PDF, 영상, 이미지, 압축파일 |
+
+중복을 피하기 위해 장문 프로젝트 설명은 한 위치에만 둔다. 다른 문서는 링크와 요약만 남긴다.
 
 ## Career Materials
 

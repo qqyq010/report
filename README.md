@@ -31,11 +31,24 @@ GitHub에는 민감정보와 원본 대용량 자료를 올리지 않는다.
 ## 주요 문서
 
 - [INDEX.md](INDEX.md): 전체 근거 문서 인덱스
+- [portfolio-projects-role-map.md](portfolio-projects-role-map.md): `portfolio/`, `projects/`, `career/`, Drive 역할 분리 기준
 - [drive-links.md](drive-links.md): Google Drive 원본 자료 위치
 - [security-redaction-checklist.md](security-redaction-checklist.md): 공개 전 제거 항목
 - [career/](career/): 이력서, 자소서, 면접 소재 정리
 - [projects/](projects/): 프로젝트별 구현 근거 정리
 - [portfolio/](portfolio/): 기존 공개 포트폴리오 근거
+
+## 역할 분리
+
+| 위치 | 역할 |
+| --- | --- |
+| `portfolio/` | 외부 공개 가능한 정제 포트폴리오 근거, sanitized evidence, 공개 가능한 코드/문서 근거 |
+| `projects/` | 자소서/면접용 내부 working area, 직접 구현 / 팀 결과물 / 확인 필요 / 과장 위험 분류, 코드 근거 투입 대기 |
+| `career/` | 프로젝트별 근거를 이력서, 자소서, 면접 소재로 변환하는 상위 정리 공간 |
+| Drive `center` | 원본 문서, PPT, PDF, 영상, 이미지, 압축파일 보관 |
+
+같은 프로젝트 설명을 여러 곳에 장문으로 반복하지 않습니다. 공개 가능한 정제 설명은 `portfolio/`,
+claim 정리는 `projects/`, 전체 취업 포지셔닝은 `career/`, 원본 파일은 Drive에 둡니다.
 
 ## 기존 Portfolio Structure
 

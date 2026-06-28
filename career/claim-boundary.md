@@ -11,6 +11,18 @@
 - 원본 문서와 대용량 자료는 Google Drive `center` 폴더에 둔다.
 - 직접 구현 / 팀 결과물 / 확인 필요 / 과장 위험을 분리해서 기록한다.
 - Project3는 완성 게임 포트폴리오가 아니라 작업 방식, 검증, 문서화, 툴링 태도의 보조 근거로 다룬다.
+- `portfolio/`는 외부 공개 가능한 정제 설명과 sanitized evidence를 둔다.
+- `projects/`는 자소서/면접용 claim working area로 둔다.
+- `career/`는 프로젝트별 근거를 이력서, 자소서, 면접 소재로 변환하는 상위 정리 공간으로 둔다.
+
+## 문서 위치 기준
+
+- 공개 가능한 정제 설명은 `portfolio/`에 둔다.
+- 직접 구현 / 팀 결과물 / 확인 필요 / 과장 위험 분류는 `projects/`에 둔다.
+- 전체 취업 포지셔닝과 주장 경계는 `career/`에 둔다.
+- 원본 파일은 Drive `center`에 둔다.
+- GitHub에는 링크와 요약만 둔다.
+- 상세 기준은 [portfolio-projects-role-map.md](../portfolio-projects-role-map.md)를 따른다.
 
 ## 직접 구현 근거
 
