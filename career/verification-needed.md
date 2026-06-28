@@ -129,6 +129,50 @@
 - 로컬 절대경로, 사용자명, 라이선스 로그, 원본 Unity log
 - `.ppt`, `.pptx`, `.docx`, `.pdf`, 이미지, 영상, 압축파일 원본
 
+## Project3 - Fisher 보강 필요 자료
+
+### 현재 문서 근거가 있는 항목
+
+- `portfolio/03-project3-fisher/README.md`: Project3 Fisher의 public scope와 caveat.
+- `portfolio/03-project3-fisher/ai-assisted-workflow.md`: AI/Codex를 분석/검토/검증 큐 관리 보조로 쓰는 기준.
+- `portfolio/03-project3-fisher/evidence-source-map.md`: PlayFab 요청/응답/live proof 분리.
+- `portfolio/03-project3-fisher/tools-and-verification.md`: code 확인, build/self-test, Play Mode, live proof label.
+- `projects/project3-fisher/source-file-map.md`, `claim-evidence-map.md`: Project3 보조 근거 working map.
+
+### 반드시 확인해야 할 항목
+
+- Fisher/CSH에서 본인 담당 범위.
+- 실제 `.cs` 코드 근거 또는 sanitized excerpt.
+- balance workbook 원본.
+- validator 실행 로그.
+- CSV/JSON 계약 근거.
+- CloudScript handler.
+- Unity 호출부.
+- 실패/복구 로그.
+- UI/아트 파이프라인 실제 지시문.
+- UI 산출물과 Unity 적용 여부.
+- Play Mode 검증.
+- build 검증.
+- live proof.
+- 팀 공개 승인.
+- 민감정보 제거 기준.
+
+### 현재 repo 기준 근거 없는 항목
+
+- 직접 구현 확정 가능한 Project3 `.cs` code evidence.
+- CloudScript 원본 또는 sanitized handler.
+- PlayFab live 성공 근거.
+- balance workbook과 실제 tuning 결과.
+- UI/아트 산출물 원본과 Unity 적용 검증.
+
+### 공개 전에 확인할 항목
+
+- 팀 프로젝트 전체 원본 코드가 GitHub에 포함되지 않는지.
+- PlayFab Secret Key, 설정값, live 데이터, 내부 API가 제거되었는지.
+- 유료 에셋 원본, 팀원 개인정보, 원본 로그가 제거되었는지.
+- `.ppt`, `.pptx`, `.docx`, `.pdf`, 이미지, 영상, 압축파일 원본은 Drive 보관 대상으로 분리했는지.
+- Project3가 완성 게임 포트폴리오처럼 표현되지 않는지.
+
 ## 자소서 활용 가능 포인트
 
 - 확인된 항목만 자소서 소재 후보로 이동한다.

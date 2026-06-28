@@ -39,7 +39,12 @@
   - 담당 범위 후보인 상점 구매 흐름에서 spend, receive, refund 순서를 설명할 수 있다.
   - merge 판정과 실행 책임을 분리한 구조를 코드 조각 기준으로 설명할 수 있다.
 - Project2 3/3 점검 판정: 4개 claim은 자소서/면접 소재로 제한 사용 가능하지만, 직접 구현 확정은 작성자/커밋/팀 change log 확인 전까지 보류한다.
-- TODO: Project3 Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인 중 직접 작업 범위 연결.
+- Project3: 현재 repo 기준 직접 구현 확정 표현은 보류한다. 검증/문서화/툴링/협업 경계 보조 근거로만 사용한다.
+- Project3에서 사용할 수 있는 제한 표현 후보:
+  - code 확인, build/self-test, Play Mode, live proof를 분리해 기록했다.
+  - AI/Codex를 코드 생성기가 아니라 분석/검토/검증 큐 관리 보조로 활용했다.
+  - 팀 원본 소스와 PlayFab 설정을 GitHub에 복사하지 않고 공개 가능한 요약과 근거 연결만 분리했다.
+  - PlayFab 관련 문제를 진단할 때 Unity 요청, 서버 응답, live proof를 분리해 보려 했다.
 
 ## 팀 결과물 / 협업 근거
 
@@ -58,6 +63,7 @@
 - TODO: Project1의 scene/prefab/Inspector 연결, Play Mode/빌드 검증, 누락 타입 확인.
 - TODO: Project2 canonical name은 `Coin Laundry`로 둔다. 내부 working area는 `projects/project2-coin-laundry/`를 사용한다.
 - TODO: Project3 관련 근거 중 공개 가능한 범위 확인.
+- TODO: Project3 Fisher/CSH에서 본인 담당 범위, 실제 코드 근거, 검증 로그, 팀 공개 승인 확인.
 
 ## 자소서 활용 가능 포인트
 
@@ -88,3 +94,5 @@
 - Unity batch log 후보 중 실패/return code가 있는 자료를 성공 근거처럼 사용하지 않는다.
 - Project1에서 repo에 없는 HideZone, PuzzleSafeZone, Player 이동을 구현 완료로 표현하지 않는다.
 - Project1을 상용 수준 스텔스 AI 또는 모든 런타임 검증 완료로 표현하지 않는다.
+- Project3를 완성 게임 포트폴리오, 서버/PlayFab 전체 설계, 전체 밸런스 확정, 모든 검증 완료, 팀 전체 코드 주도처럼 표현하지 않는다.
+- AI 이미지 산출물이나 AI/Codex 결과를 본인 직접 제작물 또는 직접 구현물처럼 표현하지 않는다.

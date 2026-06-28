@@ -25,12 +25,12 @@
 
 - Project1: EscapeRoom의 상태 관리, 적 감지, 실패 처리, 체크포인트, Treasure 퍼즐 근거를 `projects/project1-escape-room/`에 연결했다. 개인 프로젝트이므로 메인 소재 후보로 다룰 수 있다.
 - Project2: Coin Laundry의 Inventory preview/commit, Shop refund, runtime receive, merge 책임 분리 후보를 `projects/project2-coin-laundry/` 근거와 연결한다. 직접 구현 확정은 작성자/커밋 확인 후로 보류한다.
-- Project3: TODO: Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인에서 직접 검토, 수정, 검증한 사례를 연결한다.
+- Project3: Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인은 직접 구현 확정이 아니라 검증/문서화/툴링/협업 경계 보조 근거로 연결한다.
 
 ## 팀 결과물 / 협업 근거
 
 - Project2: TODO: 팀 프로젝트 1 결과물 중 본인 담당 범위와 협업 지점을 분리한다.
-- Project3: TODO: 팀 프로젝트 2의 검증 문서, 작업 기준, 툴링 태도, 협업 조율 근거를 정리한다.
+- Project3: 팀 프로젝트 2의 검증 문서, 작업 기준, 툴링 태도, 협업 조율 근거를 보조 소재로 정리한다.
 - 팀 전체 결과물은 개인 담당 범위가 확인될 때만 자소서 소재로 사용한다.
 
 ## 확인 필요
@@ -113,6 +113,40 @@
 - 모든 Play Mode 케이스를 검증 완료했다.
 - 팀 원본 소스를 공개 저장소에 포함했다.
 - sanitized excerpt가 있으므로 직접 구현이 확정됐다고 쓴다.
+
+## Project3 - Fisher 보조 소재 후보
+
+### 1. 바로 사용 가능 후보
+
+| 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 보조 근거로 제한한 태도 | Project3를 과장하지 않는 포트폴리오 운영 기준 설명 | `projects/project3-fisher/claim-evidence-map.md`, `career/claim-boundary.md` | 구현 claim 아님 | 팀 프로젝트 포함 | Project3는 완성 게임 포트폴리오가 아니라 검증/문서화/툴링 태도 보조 근거로 사용한다 | 완성 게임 포트폴리오 | 제출 문장 검수 |
+| 검증 수준 분리 | 문제 추적과 검증 태도를 설명할 때 | `portfolio/03-project3-fisher/tools-and-verification.md`, `projects/project3-fisher/technical-evidence.md` | 구현 claim 아님 | 협업 운영 방식 | code 확인, build/self-test, Play Mode, live proof를 분리해 기록했다 | 모든 검증 완료 | 실제 로그 |
+| AI/Codex 보조 범위 | AI 활용을 과장 없이 설명할 때 | `portfolio/03-project3-fisher/ai-assisted-workflow.md`, `projects/project3-fisher/claim-evidence-map.md` | 구현 claim 아님 | 작업 방식 | AI/Codex를 분석/검토/검증 큐 관리 보조로 활용했다 | AI가 전부 구현했다 | 실제 반영 사례 |
+| 공개 범위 관리 | public repo에 팀 자료를 정리한 방식 설명 | `projects/project3-fisher/code-evidence/README.md`, `drive-links.md` | 구현 claim 아님 | 팀 자료 공개 기준 | GitHub에는 요약과 근거 연결만 두고 원본은 Drive/비공개 보관 대상으로 분리했다 | 팀 원본 소스를 공개 repo에 포함했다 | 팀 공개 승인 |
+
+### 2. 제한 표현으로 사용 가능 후보
+
+| 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| PlayFab 요청/응답/live proof 분리 | 클라이언트-서버 경계 진단 태도 설명 | `portfolio/03-project3-fisher/evidence-source-map.md`, `projects/project3-fisher/cloudscript-evidence.md` | 확인 필요 | 팀 서버 계약 포함 | PlayFab 관련 문제를 진단할 때 Unity 요청, 서버 응답, live proof를 분리해 보려 했다 | PlayFab 연동 완료 | handler, Unity caller, live proof |
+| Fisher/CSH 문제 관리 | 복잡한 팀 시스템에서 문제를 좁힌 방식 설명 | `projects/project3-fisher/summary.md`, `role-and-scope.md` | 확인 필요 | 팀 프로젝트 결과물 포함 | Fisher/CSH 문제를 담당 범위, 검증 수준, 공개 가능 범위로 나누어 정리했다 | Fisher 전체를 단독 구현했다 | 담당 범위, 코드 근거 |
+
+### 3. 근거 보강 후 사용 가능 후보
+
+- Fisher/CSH 인벤토리, 상점, 요리, 도감, 밸런스 담당 경험.
+- CloudScript 문제 진단 사례.
+- UI/아트 파이프라인 정리 사례.
+- balance workbook, validator, CSV/JSON 계약 정리 사례.
+
+### 4. 사용하면 과장 위험인 후보
+
+- 완성 게임 포트폴리오.
+- 서버/PlayFab 전체 설계.
+- 전체 밸런스 확정.
+- 모든 검증 완료.
+- 팀 전체 코드 주도.
+- AI 이미지 산출물을 직접 제작 그래픽처럼 표현.
 
 ## 면접 예상 질문
 

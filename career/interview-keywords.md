@@ -15,7 +15,7 @@
 
 - Project1 후보: EscapeRoom, GameState, ProgressState, EnemyVision, Raycast, FailureHandler, Checkpoint, Treasure Puzzle.
 - Project2 후보: Coin Laundry, Inventory, Shop, Unity UI, runtime state, merge responsibility, verification summary. EventBus/디버깅은 추가 확인 필요.
-- Project3 후보: TODO: Fisher, CSH, 밸런스, CloudScript, UI 아트 파이프라인, 검증 문서.
+- Project3 후보: Fisher, CSH, Balance, CloudScript, UI/Art pipeline, verification workflow, AI-assisted workflow. 완성 게임 대표 성과가 아니라 보조 근거로 제한한다.
 
 ## Project1 - EscapeRoom 키워드 후보
 
@@ -44,6 +44,19 @@
 | 검증 로그 | 사용 가능 후보 | `projects/project2-coin-laundry/evidence/verification-summary.md` | 코드 확인/문서 확인/Play Mode/빌드 확인 구분 소재로 사용 |
 | 팀 협업 | 사용 가능 후보 | `portfolio/_shared/publication-policy.md`, `implemented-by-me.md` | 공개 범위와 담당 범위 분리 소재로 사용 |
 | 포트폴리오 문서화 | 사용 가능 | `portfolio/02-coin-laundry/`, `projects/project2-coin-laundry/` | sanitized summary와 내부 claim 정리 연결로 사용 |
+
+## Project3 - Fisher 키워드 후보
+
+| 키워드 | 상태 | 근거 경로 | 사용 기준 |
+| --- | --- | --- | --- |
+| Verification labels | 사용 가능 후보 | `portfolio/03-project3-fisher/tools-and-verification.md`, `projects/project3-fisher/technical-evidence.md` | code/build/Play Mode/live proof 분리 설명으로 사용 |
+| AI-assisted workflow | 사용 가능 후보 | `portfolio/03-project3-fisher/ai-assisted-workflow.md` | 분석/검토/검증 큐 관리 보조로 제한 |
+| Public evidence boundary | 사용 가능 후보 | `projects/project3-fisher/code-evidence/README.md`, `drive-links.md` | 팀 원본 소스와 PlayFab 설정을 GitHub에 복사하지 않는 기준 설명 |
+| PlayFab request/response split | 제한 표현 후보 | `portfolio/03-project3-fisher/evidence-source-map.md`, `projects/project3-fisher/cloudscript-evidence.md` | 요청/응답/live proof 분리로 제한. 연동 완료 claim 금지 |
+| Fisher / CSH | 확인 필요 | `projects/project3-fisher/role-and-scope.md`, `source-file-map.md` | 담당 범위와 실제 코드 근거 확보 전 핵심 구현 키워드로 쓰지 않음 |
+| Balance / Workbook | 확인 필요 | `projects/project3-fisher/balance-evidence.md` | workbook/validator/log 확보 전 전체 밸런스 claim 금지 |
+| CloudScript / PlayFab | 확인 필요 | `projects/project3-fisher/cloudscript-evidence.md` | handler/caller/live proof 확보 전 서버 구현 claim 금지 |
+| UI / Art pipeline | 확인 필요 | `projects/project3-fisher/ui-art-pipeline-evidence.md` | 산출물/지시문/Unity 적용 근거 확보 전 제작 claim 금지 |
 
 ## 팀 결과물 / 협업 근거
 
