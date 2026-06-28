@@ -47,6 +47,39 @@
 - 검증: 코드, 문서, 테스트, 로그, 시연 중 무엇으로 확인했는지.
 - 배운 점: 과장 없이 다음 작업 방식에 반영된 기준을 정리한다.
 
+## Project2 - Coin Laundry 소재 후보
+
+### 1. 바로 사용 가능 후보
+
+현재 repo 기준으로 바로 사용할 수 있는 항목은 `공개 가능한 운영 기준`과 `근거 분리 태도`에 한정한다.
+
+| 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 공개 가능 범위 분리 | 팀 프로젝트 자료를 공개 repo에 정리한 방식 설명 | `portfolio/_shared/publication-policy.md`, `portfolio/02-coin-laundry/core-file-index.md` | 해당 없음 | 팀 프로젝트 자료 정리 | 팀 소스는 공개 허가 전까지 면접 전용으로 두고 GitHub에는 요약과 인덱스만 둔다 | 팀 소스 전체를 공개해도 된다 | 팀 공개 허가 상태 |
+| 검증 수준 분리 | 코드 확인, 빌드 확인, Play Mode 확인을 섞지 않은 태도 설명 | `portfolio/02-coin-laundry/core-file-index.md`, `portfolio/_shared/sanitized-evidence-matrix.md` | 확인 필요 | 작업 기준/검증 문서 후보 | 확인한 수준과 확인 필요한 수준을 분리해 기록했다 | 모든 Play Mode 케이스를 검증 완료했다 | 실제 Play Mode A-K 로그 |
+
+### 2. 근거 보강 후 사용 가능 후보
+
+| 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Inventory preview/commit 분리 | 인벤토리 UI 상호작용에서 데이터 변경 시점을 설명할 때 | `projects/project2-coin-laundry/claim-evidence-map.md`, `portfolio/02-coin-laundry/evidence-source-map.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 담당 범위인 인벤토리 UI 상호작용에서 preview와 commit 시점을 분리했다고 설명 가능 | 팀 인벤토리 전체를 혼자 설계/구현했다 | 원본 코드, 작성자, Play Mode 검증 로그 |
+| Shop refund 경로 | 구매 실패 시 재화 상태를 보호한 사례로 설명할 때 | `projects/project2-coin-laundry/claim-evidence-map.md`, `portfolio/_shared/sanitized-evidence-matrix.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 담당 구매 흐름에서 실패 시 재화 복구 경로를 구현/설명할 수 있다 | 상점 시스템 전체를 완성했다 | 원본 코드, 실패 재현/검증 로그 |
+
+### 3. 팀 결과물/협업 기여로만 사용 가능한 후보
+
+| 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 팀 소스 공개 제한 대응 | 팀 프로젝트 공개 범위와 면접 설명 방식을 말할 때 | `portfolio/02-coin-laundry/README.md`, `portfolio/_shared/publication-policy.md` | 해당 없음 | 팀 결과물 정리 | 원본 팀 코드는 공개 허가 전까지 복사하지 않고, 설명 가능한 파일 인덱스로 정리했다 | 원본 팀 소스를 공개 저장소에 포함했다 | 공개 허가 여부 |
+| 인벤토리/상점 담당 범위 정리 | 팀 작업 안에서 담당 범위를 구분해 설명할 때 | `projects/project2-coin-laundry/implemented-by-me.md`, `source-file-map.md` | 확인 필요 | 팀 결과물 포함 | 팀 결과물 중 본인 담당 범위로 설명 가능한 후보를 분리했다 | 팀 전체 코드를 주도했다 | 팀원 구현분과 본인 구현분 경계 |
+
+### 4. 사용하면 과장 위험인 후보
+
+- 팀 프로젝트 전체 인벤토리 시스템을 혼자 전부 만들었다.
+- 상점 시스템 전체를 완성했다.
+- 모든 버그를 해결했다.
+- 모든 Play Mode 케이스를 검증 완료했다.
+- 팀 원본 소스를 공개 저장소에 포함했다.
+
 ## 면접 예상 질문
 
 - TODO: 이 사례에서 본인이 직접 한 일은 무엇인가?

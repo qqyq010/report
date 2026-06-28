@@ -36,7 +36,7 @@ GitHub에는 Drive 원본을 복사하지 않고 링크와 요약만 둔다.
 ## Project별 자료 연결 TODO
 
 - Project1: TODO: EscapeRoom 원본 영상, 스크린샷, 코드 근거 위치 확인.
-- Project2: TODO: Coin Survivor / Inventory / Shop / UI / EventBus / 디버깅 / 검증 자료 위치 확인.
+- Project2: TODO: Coin Laundry / Inventory / Shop / UI / EventBus / 디버깅 / 검증 자료 위치 확인.
 - Project3: TODO: Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인 / 검증 문서 위치 확인.
 
 ## 확인 필요

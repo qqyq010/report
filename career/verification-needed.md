@@ -34,6 +34,55 @@
 - TODO: 포트폴리오 PPT와 기술문서에 들어갈 스크린샷/영상 위치.
 - TODO: 공개 repo에 올릴 수 없는 원본 자료 목록.
 
+## Project2 - Coin Laundry 보강 필요 자료
+
+### 반드시 필요한 코드 근거
+
+- `InventoryUIController.cs`
+- `InventoryRuntimeService.cs`
+- `InventoryMergeService.cs`
+- `ShopPurchaseService.cs`
+- 각 파일의 원본 위치, 작성자/담당 범위, 공개 가능 여부
+
+### 있으면 좋은 코드 근거
+
+- EventBus 또는 이벤트 연결 코드
+- UI preview renderer 관련 코드
+- 구매 실패/환불 처리 테스트 또는 재현 코드
+
+### 반드시 필요한 문서 근거
+
+- 프로젝트 기간, 팀 규모, 담당 역할 정리
+- 인벤토리/상점 기능 변경 로그
+- 본인 담당 범위와 팀 공용 코드 경계 자료
+
+### 있으면 좋은 영상/이미지 근거
+
+- 인벤토리 드래그/회전/배치 흐름 시연
+- 상점 구매 성공/실패 흐름 시연
+- UI preview와 실제 commit 차이를 보여주는 화면
+
+### 발표자료/피드백 근거
+
+- 발표 PPT 또는 발표 대본
+- 강사 피드백
+- 팀 피드백 또는 QA 기록
+
+### 면접 전에 확인해야 할 기술 사항
+
+- preview와 commit의 실제 호출 순서
+- 환불 경로의 실패 조건과 복구 순서
+- Play Mode 확인 범위와 미검증 범위
+- EventBus 사용 여부
+
+### 공개 전에 제거해야 할 민감정보
+
+- 팀원 개인정보
+- 유료 에셋 원본
+- 팀 프로젝트 전체 원본 코드
+- API Key, Secret, Token
+- Unity `Library`, `Temp`, `Obj`, `Build`, `Logs` 폴더
+
 ## 자소서 활용 가능 포인트
 
 - 확인된 항목만 자소서 소재 후보로 이동한다.

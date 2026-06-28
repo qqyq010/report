@@ -17,6 +17,20 @@
 - Project2 후보: TODO: Coin Laundry, Inventory, Shop, UI, EventBus, 디버깅, 검증.
 - Project3 후보: TODO: Fisher, CSH, 밸런스, CloudScript, UI 아트 파이프라인, 검증 문서.
 
+## Project2 - Coin Laundry 키워드 후보
+
+| 키워드 | 상태 | 근거 경로 | 사용 기준 |
+| --- | --- | --- | --- |
+| Unity UI | 확인 필요 | `projects/project2-coin-laundry/source-file-map.md`의 `InventoryUIController.cs` 언급 | 원본 코드 확인 후 UI 상호작용 설명에 사용 |
+| Inventory | 사용 가능 후보 | `portfolio/02-coin-laundry/evidence-source-map.md`, `projects/project2-coin-laundry/technical-evidence.md` | preview/commit 분리 소재로 제한 |
+| Shop | 사용 가능 후보 | `portfolio/_shared/sanitized-evidence-matrix.md`, `projects/project2-coin-laundry/claim-evidence-map.md` | 구매 실패 시 환불 경로 소재로 제한 |
+| EventBus | 확인 필요 | 현재 repo 근거에는 EventBus 코드 파일명 없음 | 추가 코드 자료 제공 전 핵심 키워드로 사용하지 않음 |
+| 런타임 상태 관리 | 확인 필요 | `InventoryRuntimeService.cs`가 문서상 언급됨 | 원본 코드 확인 후 사용 |
+| 디버깅 | 확인 필요 | 환불/배치 실패 시나리오가 문서상 언급됨 | 실제 버그 수정 로그 필요 |
+| 검증 로그 | 확인 필요 | Project2 AI work rules, baseline docs가 문서상 언급됨 | Play Mode A-K 또는 빌드 로그 필요 |
+| 팀 협업 | 사용 가능 후보 | `portfolio/_shared/publication-policy.md`, `implemented-by-me.md` | 공개 범위와 담당 범위 분리 소재로 사용 |
+| 포트폴리오 문서화 | 사용 가능 | `portfolio/02-coin-laundry/`, `projects/project2-coin-laundry/` | sanitized summary와 내부 claim 정리 연결로 사용 |
+
 ## 팀 결과물 / 협업 근거
 
 - 팀 프로젝트 키워드는 팀 결과물과 개인 담당 범위를 함께 기록한다.

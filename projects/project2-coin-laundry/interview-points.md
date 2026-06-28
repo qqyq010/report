@@ -21,53 +21,33 @@
 
 ## 면접 예상 질문
 
-### Inventory 구조
+### 방어 가능한 질문
 
-- 인벤토리 드래그 중 preview와 실제 데이터 commit은 어떤 기준으로 나뉘는가?
-- held item, origin point, placement confirm은 각각 어떤 책임인가?
-- merge/swap/restore가 동시에 필요한 상황에서 상태가 꼬이지 않게 한 기준은 무엇인가?
+| 축 | 예상 질문 | 답변에 사용할 근거 | 설명 가능한 코드/문서 경로 | 답변 시 강조점 | 답변 시 피해야 할 표현 | 추가로 확인해야 할 것 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Inventory 구조 | 인벤토리 드래그 중 preview와 실제 데이터 commit은 어떤 기준으로 나뉘는가? | preview/commit 분리 claim | `portfolio/02-coin-laundry/evidence-source-map.md`, `projects/project2-coin-laundry/technical-evidence.md` | 화면 표시와 실제 데이터 변경 시점을 분리한 이유 | 인벤토리 전체를 혼자 설계했다 | 원본 코드와 Play Mode 검증 로그 |
+| Shop 구조 | 구매 시 골드 차감, 인벤토리 수령, 실패 시 환불 순서는 어떻게 설명할 수 있는가? | Shop refund claim | `portfolio/_shared/sanitized-evidence-matrix.md`, `claim-evidence-map.md` | 실패 경로에서 재화 상태가 깨지지 않게 한 흐름 | 상점 시스템 전체를 완성했다 | 실패 케이스 재현/검증 로그 |
+| UI 연동 | UI preview가 실제 runtime inventory를 언제 변경하는가? | `InventoryUIController.cs`, `InventoryRuntimeService.cs` 문서상 파일명 | `source-file-map.md`, `core-file-index.md` | UI 표시와 runtime 반영의 책임 분리 | UI 전체 구조를 다 구현했다 | 실제 호출 순서 |
+| 검증 방식 | 코드 확인, 빌드 확인, Play Mode 확인을 어떻게 구분했는가? | Project2 AI work rules, baseline docs 언급 | `core-file-index.md`, `sanitized-evidence-matrix.md` | 확인한 수준과 미확인 수준을 분리해 말하기 | Codex가 Play Mode를 직접 검증했다 | Play Mode A-K 원본 기록 |
+| 팀 협업 | 팀 소스 공개 허가 전까지 어떤 방식으로 면접에서 설명할 것인가? | publication policy | `portfolio/_shared/publication-policy.md`, `README.md` | 원본 팀 소스 대신 요약/인덱스/로컬 설명 사용 | 팀 소스를 공개해도 된다 | 팀 공개 허가 여부 |
 
-### Shop 구조
+### 추가 확인 필요 질문
 
-- 구매 시 골드 차감, 인벤토리 수령, 실패 시 환불 순서는 어떻게 설명할 수 있는가?
-- 아이템 수령 실패 시 사용자 재화 상태를 어떻게 복구하는가?
+| 축 | 예상 질문 | 현재 상태 | 추가 확인해야 할 것 |
+| --- | --- | --- | --- |
+| EventBus 또는 이벤트 흐름 | EventBus 구조를 어떻게 사용했는가? | 현재 repo 근거에는 EventBus 코드 파일명이 없음 | EventBus 관련 `.cs` 파일 또는 문서 |
+| 디버깅/버그 수정 | 실제 어떤 버그를 어떻게 고쳤는가? | 환불/배치 실패 시나리오는 문서상 claim 후보 | 버그 수정 전후 로그, 커밋, 재현 절차 |
+| 런타임 상태 관리 | 구매 아이템이 runtime inventory에 들어가는 경로는 무엇인가? | `InventoryRuntimeService.cs`가 문서상 언급됨 | 원본 코드, 호출 흐름, 실패 처리 검증 |
 
-### UI 연동
+### 위험 질문
 
-- UI preview가 실제 runtime inventory를 언제 변경하는가?
-- preview renderer와 실제 데이터 commit을 분리한 이유는 무엇인가?
-
-### EventBus 또는 이벤트 흐름
-
-- TODO: 현재 repo 근거에는 EventBus 코드 파일명이 없다. 자료 투입 후 질문 후보를 보강한다.
-
-### 디버깅/버그 수정
-
-- 구매 실패 시 재화만 빠지는 문제를 어떻게 재현하고 방지할 수 있는가?
-- 배치 실패 시 원래 상태로 되돌리는 흐름을 어떻게 확인했는가?
-
-### 검증 방식
-
-- 코드 확인, 빌드 확인, Play Mode 확인을 어떻게 구분했는가?
-- Play Mode A-K 기록이 있다면 어떤 항목을 근거로 사용할 수 있는가?
-
-### 팀 협업
-
-- 팀 프로젝트에서 본인 담당 범위와 팀 공용 시스템의 경계는 어디인가?
-- 팀 소스 공개 허가 전까지 어떤 방식으로 면접에서 설명할 것인가?
-
-### 포트폴리오에서 방어 가능한 설명
-
-- 담당 범위인 인벤토리 UI 상호작용에서 preview와 commit 시점을 분리했다.
-- 담당 구매 흐름에서 실패 시 재화 복구 경로를 구현/설명할 수 있다.
-- 코드 확인, 빌드 확인, Play Mode 확인을 섞지 않고 구분했다.
-
-### 물어보면 위험한 부분
-
-- 팀 프로젝트 전체 인벤토리 시스템을 혼자 만들었는가?
-- 모든 Play Mode 케이스를 검증했는가?
-- 팀 원본 소스를 공개 repo에 올릴 수 있는가?
-- EventBus 구조를 실제 코드 수준으로 설명할 수 있는가?
+| 위험 질문 | 위험한 이유 | 안전한 대응 방향 |
+| --- | --- | --- |
+| 이 전체 구조를 혼자 설계했나요? | 팀 프로젝트 전체 성과를 개인 구현처럼 보이게 할 수 있음 | 담당 범위와 팀 공용 시스템을 분리해 답변 |
+| 팀원의 코드는 어디까지 관여했나요? | 소유권 경계가 불명확하면 과장 위험 | 원본 코드/담당표 확인 전에는 확인 필요로 답변 |
+| 실제 빌드에서 검증했나요? | 현재 repo에는 빌드/Play Mode 원본 로그가 없음 | 코드 확인, 문서 확인, Play Mode 확인을 분리 |
+| 상용 수준으로 완성됐나요? | 근거 없는 완성도 주장 | 포트폴리오 근거와 면접 설명 가능한 범위로 제한 |
+| QA를 담당한 건가요, 개발 검증을 한 건가요? | 전체 QA 담당으로 오해될 수 있음 | 개발 중 확인한 검증 범위로 제한 |
 
 ## 과장 위험 / 금지 표현
 
