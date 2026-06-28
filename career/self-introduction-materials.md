@@ -23,8 +23,8 @@
 
 ## 직접 구현 근거
 
-- Project1: TODO: EscapeRoom의 퍼즐/잠입/실패 처리 등 직접 구현한 문제 해결 사례를 연결한다.
-- Project2: TODO: Inventory / Shop / UI / EventBus / 디버깅 / 검증 중 직접 담당한 사례를 연결한다.
+- Project1: EscapeRoom의 상태 관리, 적 감지, 실패 처리, 체크포인트, Treasure 퍼즐 근거를 `projects/project1-escape-room/`에 연결했다. 개인 프로젝트이므로 메인 소재 후보로 다룰 수 있다.
+- Project2: Coin Laundry의 Inventory preview/commit, Shop refund, runtime receive, merge 책임 분리 후보를 `projects/project2-coin-laundry/` 근거와 연결한다. 직접 구현 확정은 작성자/커밋 확인 후로 보류한다.
 - Project3: TODO: Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인에서 직접 검토, 수정, 검증한 사례를 연결한다.
 
 ## 팀 결과물 / 협업 근거
@@ -47,6 +47,37 @@
 - 검증: 코드, 문서, 테스트, 로그, 시연 중 무엇으로 확인했는지.
 - 배운 점: 과장 없이 다음 작업 방식에 반영된 기준을 정리한다.
 
+## Project1 - EscapeRoom 소재 후보
+
+### 1. 바로 사용 가능 후보
+
+| 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 상태 관리와 진행도 분리 | 개인 프로젝트에서 게임 흐름을 코드로 관리한 경험 설명 | `projects/project1-escape-room/claim-evidence-map.md`, `portfolio/01-escape-room/code/Core/GameManager.cs`, `ProgressState.cs` | 직접 구현 후보 | 해당 없음 | GameState와 ProgressState를 나눠 행동 가능 상태와 퍼즐 진행도를 분리했다 | 전체 시스템을 완성도 높게 설계했다 | enum 정의, scene 연결 |
+| 거리/각도/Raycast 감지 구조 | 잠입 요소 구현 경험 설명 | `portfolio/01-escape-room/code/Enemy/EnemyVision.cs`, `projects/project1-escape-room/technical-evidence.md` | 직접 구현 후보 | 해당 없음 | 거리, 각도, Raycast line-of-sight를 순서대로 확인하는 감지 구조를 구현했다 | 상용 수준 스텔스 AI를 구현했다 | layer mask, Play Mode |
+| 실패 처리와 체크포인트 복귀 | 실패/재시도 흐름을 설명할 때 | `FailureHandler.cs`, `CheckpointManager.cs`, `CheckpointTrigger.cs` | 직접 구현 후보 | 해당 없음 | 감지 실패를 복구 흐름으로 연결하고 체크포인트 복귀 책임을 분리했다 | QA 전체를 수행했다 | `InputLockController`, scene trigger |
+| Treasure 퍼즐 reset/phase unlock | 퍼즐 상태 관리 경험 설명 | `TreasureGridManager.cs`, `TreasureEnemy.cs`, `ProgressState.cs` | 직접 구현 후보 | 해당 없음 | Treasure 퍼즐의 node/path/reset/phase unlock 흐름을 코드로 관리했다 | 모든 퍼즐을 완벽하게 구현했다 | 누락 타입, scene 연결 |
+
+### 2. 근거 보강 후 사용 가능 후보
+
+- 실제 시연 기반 문제 해결 사례.
+- HideZone, PuzzleSafeZone.
+- Player 이동 구현.
+- scene/prefab/Inspector 연결.
+- Play Mode 또는 빌드 검증.
+
+### 3. AI/Codex 보조로만 사용할 후보
+
+- AI/Codex가 감지, 실패, 체크포인트, 퍼즐 진행 문제를 분석/검토/문서화하는 보조 역할을 했다.
+- 최종 코드와 AI 제안 후보를 대조했다.
+
+### 4. 사용하면 과장 위험인 후보
+
+- 상용 수준 스텔스 AI.
+- 모든 AI 로직 직접 구현.
+- 모든 런타임 검증 완료.
+- AI/Codex 없이 전부 직접 작성.
+
 ## Project2 - Coin Laundry 소재 후보
 
 ### 1. 바로 사용 가능 후보
@@ -56,14 +87,16 @@
 | 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 공개 가능 범위 분리 | 팀 프로젝트 자료를 공개 repo에 정리한 방식 설명 | `portfolio/_shared/publication-policy.md`, `portfolio/02-coin-laundry/core-file-index.md` | 해당 없음 | 팀 프로젝트 자료 정리 | 팀 소스는 공개 허가 전까지 면접 전용으로 두고 GitHub에는 요약과 인덱스만 둔다 | 팀 소스 전체를 공개해도 된다 | 팀 공개 허가 상태 |
-| 검증 수준 분리 | 코드 확인, 빌드 확인, Play Mode 확인을 섞지 않은 태도 설명 | `portfolio/02-coin-laundry/core-file-index.md`, `portfolio/_shared/sanitized-evidence-matrix.md` | 확인 필요 | 작업 기준/검증 문서 후보 | 확인한 수준과 확인 필요한 수준을 분리해 기록했다 | 모든 Play Mode 케이스를 검증 완료했다 | 실제 Play Mode A-K 로그 |
+| 검증 수준 분리 | 코드 확인, 빌드 확인, Play Mode 확인을 섞지 않은 태도 설명 | `projects/project2-coin-laundry/evidence/verification-summary.md`, `portfolio/02-coin-laundry/core-file-index.md`, `portfolio/_shared/sanitized-evidence-matrix.md` | 확인 필요 | 작업 기준/검증 문서 후보 | 확인한 수준과 확인 필요한 수준을 분리해 기록했다 | 모든 Play Mode 케이스를 검증 완료했다 | 실제 Play Mode A-K 로그 |
 
 ### 2. 근거 보강 후 사용 가능 후보
 
 | 소재명 | 사용할 수 있는 상황 | 근거 경로 | 직접 구현 여부 | 팀 결과물 여부 | 안전한 표현 | 금지 표현 | 추가 확인 필요 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Inventory preview/commit 분리 | 인벤토리 UI 상호작용에서 데이터 변경 시점을 설명할 때 | `projects/project2-coin-laundry/claim-evidence-map.md`, `portfolio/02-coin-laundry/evidence-source-map.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 담당 범위인 인벤토리 UI 상호작용에서 preview와 commit 시점을 분리했다고 설명 가능 | 팀 인벤토리 전체를 혼자 설계/구현했다 | 원본 코드, 작성자, Play Mode 검증 로그 |
-| Shop refund 경로 | 구매 실패 시 재화 상태를 보호한 사례로 설명할 때 | `projects/project2-coin-laundry/claim-evidence-map.md`, `portfolio/_shared/sanitized-evidence-matrix.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 담당 구매 흐름에서 실패 시 재화 복구 경로를 구현/설명할 수 있다 | 상점 시스템 전체를 완성했다 | 원본 코드, 실패 재현/검증 로그 |
+| Inventory preview/commit 분리 | 인벤토리 UI 상호작용에서 데이터 변경 시점을 설명할 때 | `projects/project2-coin-laundry/code-evidence/InventoryUIController.preview-commit.excerpt.cs`, `projects/project2-coin-laundry/claim-evidence-map.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 담당 범위인 인벤토리 UI 상호작용에서 preview와 commit 시점을 분리했다고 설명 가능 | 팀 인벤토리 전체를 혼자 설계/구현했다 | 작성자/커밋, Play Mode 검증 로그 |
+| Shop refund 경로 | 구매 실패 시 재화 상태를 보호한 사례로 설명할 때 | `projects/project2-coin-laundry/code-evidence/ShopPurchaseService.purchase-refund.excerpt.cs`, `projects/project2-coin-laundry/claim-evidence-map.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 담당 구매 흐름에서 실패 시 재화 복구 경로를 구현/설명할 수 있다 | 상점 시스템 전체를 완성했다 | 실패 재현/검증 로그 |
+| Runtime receive 흐름 | 구매 아이템이 실제 inventory state로 들어가는 과정을 설명할 때 | `projects/project2-coin-laundry/code-evidence/InventoryRuntimeService.receive-flow.excerpt.cs`, `projects/project2-coin-laundry/technical-evidence.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | 구매 아이템 수령, 실패 처리, fallback 여부를 단계별로 설명 가능 | 런타임 인벤토리 전체 구조를 직접 설계했다 | 담당 범위, event ownership |
+| Merge 책임 분리 | UI preview와 실제 merge 실행 책임을 나눠 설명할 때 | `projects/project2-coin-laundry/code-evidence/InventoryMergeService.merge-responsibility.excerpt.cs`, `projects/project2-coin-laundry/technical-evidence.md` | 직접 구현 후보 | 팀 프로젝트 결과물 포함 | merge 판정과 실행 책임을 분리했다고 설명 가능 | merge/swap/restore 전체를 혼자 완성했다 | 담당 범위, 검증 자료 |
 
 ### 3. 팀 결과물/협업 기여로만 사용 가능한 후보
 
@@ -79,6 +112,7 @@
 - 모든 버그를 해결했다.
 - 모든 Play Mode 케이스를 검증 완료했다.
 - 팀 원본 소스를 공개 저장소에 포함했다.
+- sanitized excerpt가 있으므로 직접 구현이 확정됐다고 쓴다.
 
 ## 면접 예상 질문
 

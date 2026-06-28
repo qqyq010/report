@@ -13,7 +13,7 @@
 
 ## 직접 구현 근거
 
-- TODO: Project1 EscapeRoom 직접 구현 파일과 시연 근거 확인.
+- Project1 EscapeRoom: 공개 코드 10개와 claim mapping은 확인됨. 시연 근거와 scene 연결은 확인 필요.
 - TODO: Project2 Inventory / Shop / UI / EventBus / 디버깅 / 검증의 직접 담당 범위 확인.
 - TODO: Project3 Fisher / CSH / 밸런스 / CloudScript / UI 아트 파이프라인의 직접 작업 범위 확인.
 - TODO: 각 항목별 코드, 커밋, 문서, 시연 자료 연결.
@@ -34,39 +34,80 @@
 - TODO: 포트폴리오 PPT와 기술문서에 들어갈 스크린샷/영상 위치.
 - TODO: 공개 repo에 올릴 수 없는 원본 자료 목록.
 
+## Project1 - EscapeRoom 보강 필요 자료
+
+### 현재 코드 근거가 있는 항목
+
+- `GameManager.cs`, `ProgressState.cs`: 상태와 진행도 분리.
+- `EnemyVision.cs`, `DetectionController.cs`, `PlayerDetectionTarget.cs`: 거리/각도/Raycast 감지와 실패 연결.
+- `FailureHandler.cs`, `CheckpointManager.cs`, `CheckpointTrigger.cs`: 실패 처리와 체크포인트 복귀.
+- `TreasureGridManager.cs`, `TreasureEnemy.cs`: Treasure 퍼즐 reset/phase unlock과 추적 적.
+
+### 반드시 확인해야 할 항목
+
+- 프로젝트 기간.
+- Unity 버전.
+- 실제 scene/prefab/Inspector 연결.
+- 시연 영상 또는 빌드 위치.
+- Play Mode 검증 근거.
+- 빌드 검증 근거.
+
+### 현재 repo 기준 근거 없는 항목
+
+- HideZone 코드 근거.
+- PuzzleSafeZone 코드 근거.
+- Player 이동 구현 파일.
+- `InputLockController`.
+- `TreasureNode`.
+- `TreasurePlayerMovement`.
+- `TreasureTrigger`.
+- `GameState`, `PuzzleType`, `FailureReason`, `FailureRecoveryType` enum 정의.
+
+### 공개 전에 확인할 항목
+
+- 원본 Unity scene/prefab을 GitHub에 올리지 않는지.
+- 영상, 이미지, 빌드 파일은 Drive 보관 대상으로 분리했는지.
+- AI/Codex 관련 표현이 보조 도구 범위에 머무르는지.
+
 ## Project2 - Coin Laundry 보강 필요 자료
 
 ### 반드시 필요한 코드 근거
 
-- `InventoryUIController.cs`
-- `InventoryRuntimeService.cs`
-- `InventoryMergeService.cs`
-- `ShopPurchaseService.cs`
-- 각 파일의 원본 위치, 작성자/담당 범위, 공개 가능 여부
+- `InventoryUIController.cs`: 원본 위치 확인 완료, excerpt 생성 완료. 작성자/담당 범위/공개 승인 확인 필요.
+- `InventoryRuntimeService.cs`: 원본 위치 확인 완료, excerpt 생성 완료. 작성자/담당 범위/fallback 검증 확인 필요.
+- `InventoryMergeService.cs`: 원본 위치 확인 완료, excerpt 생성 완료. 작성자/담당 범위/merge 검증 확인 필요.
+- `ShopPurchaseService.cs`: 원본 위치 확인 완료, excerpt 생성 완료. 작성자/담당 범위/환불 실패 케이스 검증 확인 필요.
+- 각 파일의 커밋 기록, 작성자, 팀 공개 승인 여부.
+- 3/3 점검 기준: 로컬 UVCS/Plastic workspace 흔적은 있으나 작성자/커밋 확정 근거는 아직 부족하다.
 
 ### 있으면 좋은 코드 근거
 
 - EventBus 또는 이벤트 연결 코드
 - UI preview renderer 관련 코드
 - 구매 실패/환불 처리 테스트 또는 재현 코드
+- PlayerCurrencyCore 또는 재화 차감/환불 연결 코드
+- ShopSlotController 또는 상점 UI와 구매 service 연결 코드
 
 ### 반드시 필요한 문서 근거
 
 - 프로젝트 기간, 팀 규모, 담당 역할 정리
 - 인벤토리/상점 기능 변경 로그
 - 본인 담당 범위와 팀 공용 코드 경계 자료
+- sanitized excerpt 공개 가능 여부 또는 면접 전용 사용 기준
 
 ### 있으면 좋은 영상/이미지 근거
 
 - 인벤토리 드래그/회전/배치 흐름 시연
 - 상점 구매 성공/실패 흐름 시연
 - UI preview와 실제 commit 차이를 보여주는 화면
+- merge 성공/실패 또는 swap/restore 흐름 시연
 
 ### 발표자료/피드백 근거
 
 - 발표 PPT 또는 발표 대본
 - 강사 피드백
 - 팀 피드백 또는 QA 기록
+- 리뷰 시트, Notion export, 기능 명세서의 Drive 링크
 
 ### 면접 전에 확인해야 할 기술 사항
 
@@ -74,6 +115,9 @@
 - 환불 경로의 실패 조건과 복구 순서
 - Play Mode 확인 범위와 미검증 범위
 - EventBus 사용 여부
+- fallback merge의 조건과 의도
+- 코드 확인, 문서 확인, 빌드 확인, Unity Play Mode 확인의 분리 기준
+- 4개 핵심 claim을 직접 구현으로 확정할 수 있는지, 팀 결과물/협업 기여로 제한해야 하는지
 
 ### 공개 전에 제거해야 할 민감정보
 
@@ -82,6 +126,8 @@
 - 팀 프로젝트 전체 원본 코드
 - API Key, Secret, Token
 - Unity `Library`, `Temp`, `Obj`, `Build`, `Logs` 폴더
+- 로컬 절대경로, 사용자명, 라이선스 로그, 원본 Unity log
+- `.ppt`, `.pptx`, `.docx`, `.pdf`, 이미지, 영상, 압축파일 원본
 
 ## 자소서 활용 가능 포인트
 
