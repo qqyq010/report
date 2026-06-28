@@ -14,7 +14,7 @@
 ## 직접 구현 근거
 
 - Project1 후보: TODO: EscapeRoom, 퍼즐, 잠입 요소, 상태 관리, 실패 처리, 체크포인트.
-- Project2 후보: TODO: Coin Survivor, Inventory, Shop, UI, EventBus, 디버깅, 검증.
+- Project2 후보: TODO: Coin Laundry, Inventory, Shop, UI, EventBus, 디버깅, 검증. 현재 `projects/project2-coin-survivor/` 경로명은 rename 승인 전 임시 경로로 본다.
 - Project3 후보: TODO: Fisher, CSH, 밸런스, CloudScript, UI 아트 파이프라인, 검증 문서.
 
 ## 팀 결과물 / 협업 근거

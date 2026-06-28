@@ -42,7 +42,7 @@
 - TODO: 팀 프로젝트 원본 코드 공개 가능 범위 확인.
 - TODO: 팀원 개인정보와 유료 에셋 포함 여부 확인.
 - TODO: 문서상 설계, 코드 존재, 빌드 확인, 런타임 검증을 각각 분리.
-- TODO: Coin Survivor와 기존 `portfolio/02-coin-laundry/` 명칭 관계 확인.
+- TODO: Project2 canonical name은 현재 repo 기준 `Coin Laundry` 후보로 둔다. `projects/project2-coin-survivor/` 경로 rename은 사용자 승인 후 진행한다.
 - TODO: Project3 관련 근거 중 공개 가능한 범위 확인.
 
 ## 자소서 활용 가능 포인트
