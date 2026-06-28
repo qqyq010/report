@@ -31,11 +31,11 @@
 ### Project2 Coin Laundry
 
 - 사용 위치: 제한 표현 기반 기술 보조 소재, 팀 프로젝트 협업 소재, 면접에서 구조 설명 후보.
-- 근거: `projects/project2-coin-laundry/implemented-by-me.md`, `claim-evidence-map.md`, `code-evidence/`, `portfolio/02-coin-laundry/`.
+- 근거: `projects/project2-coin-laundry/implemented-by-me.md`, `claim-evidence-map.md`, `source-file-map.md`, `code-evidence/README.md`, `portfolio/02-coin-laundry/`.
 - 안전한 표현:
   - 팀 프로젝트에서 인벤토리/상점 관련 담당 범위 후보를 근거별로 분리했다.
-  - 인벤토리 preview와 commit 시점 분리 구조를 sanitized excerpt 기준으로 설명할 수 있다.
-  - 상점 구매 실패 시 refund 흐름 후보를 코드 조각 기준으로 설명할 수 있다.
+  - 인벤토리 preview와 commit 시점 분리 구조를 sanitized summary와 source map 기준으로 설명할 수 있다.
+  - 상점 구매 실패 시 refund 흐름 후보를 문서 근거와 파일 인덱스 기준으로 설명할 수 있다.
   - runtime inventory receive 흐름과 merge 판정/실행 책임 분리 후보를 면접 질문 대비용으로 정리했다.
   - 팀 원본 코드와 공개 가능한 sanitized evidence를 분리했다.
 - 금지 표현:
@@ -83,16 +83,16 @@
 ## 4. 제한 표현으로 사용 가능한 자소서 소재
 
 - Project2: Inventory preview와 commit 분리.
-  - 근거: `projects/project2-coin-laundry/code-evidence/`, `claim-evidence-map.md`.
+  - 근거: `projects/project2-coin-laundry/source-file-map.md`, `claim-evidence-map.md`, `portfolio/02-coin-laundry/core-file-index.md`.
   - 제한: 직접 구현 확정은 작성자/커밋/팀 승인 확인 전까지 금지.
 - Project2: Shop 구매 실패 시 refund 흐름.
-  - 근거: `ShopPurchaseService.purchase-refund.excerpt.cs`, `claim-evidence-map.md`.
+  - 근거: `projects/project2-coin-laundry/source-file-map.md`, `claim-evidence-map.md`, `portfolio/02-coin-laundry/evidence-source-map.md`.
   - 제한: 실제 실패 재현/검증 로그 확보 전까지 "후보" 또는 "설명 가능 구조"로 사용.
 - Project2: Runtime inventory receive 흐름.
-  - 근거: `InventoryRuntimeService.receive-flow.excerpt.cs`, `technical-evidence.md`.
+  - 근거: `projects/project2-coin-laundry/source-file-map.md`, `technical-evidence.md`.
   - 제한: 전체 런타임 인벤토리 설계 claim 금지.
 - Project2: Merge 판정과 실행 책임 분리.
-  - 근거: `InventoryMergeService.merge-responsibility.excerpt.cs`.
+  - 근거: `projects/project2-coin-laundry/source-file-map.md`, `claim-evidence-map.md`.
   - 제한: merge/swap/restore 전체 단독 완성 claim 금지.
 - Project3: PlayFab 요청, 응답, 실패 복구, live proof 분리.
   - 근거: `projects/project3-fisher/cloudscript-evidence.md`, `portfolio/03-project3-fisher/evidence-source-map.md`.
