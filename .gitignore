@@ -37,3 +37,6 @@ Desktop.ini
 *.temp
 __pycache__/
 *.pyc
+
+# Generated submission artifacts
+exports/
