@@ -5,6 +5,23 @@
 This index connects sanitized evidence to claims that can be reused across a resume, technical document, and presentation.
 Verification levels are intentionally narrow. Local checks are not treated as deployed service proof.
 
+## Project1 Code Evidence
+
+Project1 scripts are sanitized portfolio samples. They are not the full original Unity project.
+Project-specific paths, assets, debug code, and non-essential implementation details were removed.
+These samples are intended to support the portfolio explanation of failure recovery, checkpoint restore, detection, interaction, and movement flow.
+
+| evidence_id | connected claim | evidence file | verification level | public level | PPT use |
+| --- | --- | --- | --- | --- | --- |
+| E-P1-CODE-01 | Game state and playable flow are separated from puzzle progress. | [`GameManager_sample.cs`](scripts/project1/GameManager_sample.cs), [`ProgressState_sample.cs`](scripts/project1/ProgressState_sample.cs) | Direct sanitized sample review | Sanitized sample | State/progress slide |
+| E-P1-CODE-02 | Failure reason, recovery action, restore state, and checkpoint restore are separated. | [`FailureHandler_sample.cs`](scripts/project1/FailureHandler_sample.cs), [`CheckpointManager_sample.cs`](scripts/project1/CheckpointManager_sample.cs) | Direct sanitized sample review | Sanitized sample | Failure recovery slide |
+| E-P1-CODE-03 | Detection is checked through range, view angle, and line-of-sight conditions. | [`EnemyVision_sample.cs`](scripts/project1/EnemyVision_sample.cs) | Direct sanitized sample review | Sanitized sample | Detection UML slide |
+| E-P1-CODE-04 | Player interaction switches between centered ray and cursor-position ray flow. | [`PlayerInteraction_sample.cs`](scripts/project1/PlayerInteraction_sample.cs) | Direct sanitized sample review | Sanitized sample | Interaction flow slide |
+| E-P1-CODE-05 | Player movement resolves input into camera-relative movement direction. | [`PlayerMove_sample.cs`](scripts/project1/PlayerMove_sample.cs) | Direct sanitized sample review | Sanitized sample | Movement/input slide |
+| E-P1-RED-01 | Public sharing uses sanitized samples and documents removed information types. | [`redaction_report_project1.md`](redaction_report_project1.md) | Redaction report review | Public | Code evidence boundary slide |
+
+## Project3 Boundary / Validation Evidence
+
 | evidence_id | connected claim | evidence file | verification level | public level | resume use | technical doc use | PPT use |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | E-CODE-01 | Common request gate prevents duplicate requests and filters stale callbacks. | `FisherServerMutationGate.cs` | Direct code check | Sanitized excerpt only | Request gate claim | Request lifecycle section | One flow slide |

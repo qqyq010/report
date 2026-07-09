@@ -1,12 +1,14 @@
-# Project3 Sanitized Evidence Package
+# Unity Portfolio Sanitized Evidence Package
 
 ## Purpose
 
 This package is a sanitized evidence package for resume, technical-document, and presentation use.
-It is not a source-code archive, not a workbook archive, and not a raw project export.
+It includes Project1 script samples and Project3 boundary-management evidence.
+It is not a full source-code archive, not a workbook archive, and not a raw project export.
 
-The package preserves only the evidence needed to explain defensible Project3 claims:
+The package preserves only the evidence needed to explain defensible portfolio claims:
 
+- Project1 failure recovery, checkpoint restore, detection, interaction, and movement flow through sanitized script samples.
 - UI request, server response, and local snapshot boundary handling.
 - Adapter and bridge responsibility separation.
 - Request gate behavior for duplicate request prevention, stale callback filtering, and timeout recovery.
@@ -34,6 +36,22 @@ Excluded:
 - Team log originals and private working notes.
 - Local absolute paths.
 
+## Project1 Code Evidence
+
+Project1 scripts are sanitized portfolio samples. They are not the full original Unity project.
+Project-specific paths, assets, debug code, and non-essential implementation details were removed.
+These samples are intended to support the portfolio explanation of failure recovery, checkpoint restore, detection, interaction, and movement flow.
+
+- [Project1 script sample README](scripts/project1/README.md)
+- [GameManager_sample.cs](scripts/project1/GameManager_sample.cs)
+- [ProgressState_sample.cs](scripts/project1/ProgressState_sample.cs)
+- [FailureHandler_sample.cs](scripts/project1/FailureHandler_sample.cs)
+- [CheckpointManager_sample.cs](scripts/project1/CheckpointManager_sample.cs)
+- [EnemyVision_sample.cs](scripts/project1/EnemyVision_sample.cs)
+- [PlayerInteraction_sample.cs](scripts/project1/PlayerInteraction_sample.cs)
+- [PlayerMove_sample.cs](scripts/project1/PlayerMove_sample.cs)
+- [Project1 redaction report](redaction_report_project1.md)
+
 ## Project3 Claim Boundary
 
 Project3 should be presented as local candidate verification and boundary-management experience, not as a shipped or final product.
@@ -59,6 +77,8 @@ Recommended review order:
 3. `data_validation_summary.md`
 4. `sanitized_excerpts.md`
 5. `redaction_report.md`
+6. `scripts/project1/README.md`
+7. `redaction_report_project1.md`
 
-For an external GPT review, upload only the zip generated from these six markdown files.
+For an external GPT review, upload only the reviewed public package files listed above.
 Do not attach original project source, workbook, raw CSV, raw JSON, or project logs unless a separate private review has been approved.
