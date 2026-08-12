@@ -1,11 +1,11 @@
-# Coin Laundry Core File Index
+# Coin Survivor Core File Index
 
 ## Files To Explain In Interview
 
 | File | Evidence Level | What To Explain | Public Status |
 | --- | --- | --- | --- |
 | `ShopPurchaseService.cs` | Code Evidence | 구매 트랜잭션, 골드 차감 후 인벤토리 수령 실패 시 환불 | Interview only until team approval |
-| `InventoryUIController.cs` | Code Evidence | held item, rotation, preview, placement confirm 분리 | Interview only until team approval |
+| `InventoryUIController.cs` | Code Evidence | 드래그 중 상태, 회전, 배치 미리보기, 실제 확정 분리 | Interview only until team approval |
 | `InventoryRuntimeService.cs` | Code Evidence | 구매 아이템 수령, runtime inventory 반영 | Interview only until team approval |
 | `InventoryMergeService.cs` | Code Evidence | merge 판정과 실행 책임 분리 | Interview only until team approval |
 | Project2 AI work rules | Document Evidence | GPT/Codex 역할 분리, Play Mode와 build 검증 분리 | Sanitized summary only |
@@ -14,7 +14,7 @@
 ## Safe Claims
 
 - 상점 구매 과정에서 재화 차감 후 인벤토리 수령 실패 시 환불하는 실패 경로를 고려했습니다.
-- 인벤토리 UI preview와 실제 데이터 확정 시점을 분리했습니다.
+- 인벤토리 UI 미리보기와 실제 데이터 확정 시점을 분리했습니다.
 - Codex/GPT 작업 규칙을 통해 코드 확인, 빌드 확인, Play Mode 확인을 구분했습니다.
 
 ## Unsafe Claims

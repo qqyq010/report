@@ -6,6 +6,7 @@
 | --- | --- | --- | --- |
 | `InventoryService.cs` | Code Evidence | inventory snapshot, stack count, validation, capacity/overflow handling | Interview only until team approval |
 | `ShopService.cs` | Code Evidence | shop item validation, reward apply, refund on reward failure | Interview only until team approval |
+| `FisherServerMutationGate.cs` (type: `FisherServerRequestGate`) | Code Evidence | 중복 요청 차단, 요청 식별자, 시간 초과와 오래된 응답 무효화 | Interview only until team approval |
 | `FisherPlayerDataBridge.cs` | Code Evidence | PlayFab gateway request, mutation result handling, rejected mutation refresh | Interview only until team approval |
 | `ShopPanelAdapter.cs` | Code Evidence | server-authority purchase UI, pending state, timeout/failure recovery | Interview only until team approval |
 | `BagPanelAdapter.cs` | Code Evidence | sell/use-box request and pending state handling | Interview only until team approval |
