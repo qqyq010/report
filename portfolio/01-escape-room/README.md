@@ -28,7 +28,10 @@
 - 실패 후 체크포인트 복귀에서 입력과 카메라 상태가 꼬이지 않게 한 방식
 - 퍼즐 진행 상태와 플레이어 행동 상태를 같은 변수로 처리하지 않은 이유
 
-## Verification Caveat
+## Evidence Layers
 
-이 저장소에는 핵심 코드만 공개합니다. Unity scene, prefab, Inspector binding,
-최종 빌드 파일은 포함하지 않았습니다.
+- **Public GitHub**: 위 핵심 C# 코드와 구조 설명
+- **Local interview evidence**: 전체 Unity scene, prefab, Inspector binding
+- **Execution evidence**: 최종 빌드에서 감지, 퍼즐 3종, 실패 복구, 탈출 흐름을 확인한 캡처
+
+공개 코드만으로 Unity 프로젝트 전체 연결 상태까지 증명한다고 말하지 않습니다.

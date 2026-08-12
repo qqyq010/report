@@ -1,22 +1,31 @@
-# Coin Laundry
+# Coin Survivor
 
 팀 프로젝트 1에서 인벤토리와 상점 기능을 담당한 범위를 정리한 공개용 문서입니다.
+프로젝트는 STOVE에 출시됐습니다.
+
+> 저장소 폴더명 `02-coin-laundry`는 개발 당시 사용하던 경로를 유지한 것입니다.
+> 제출 문서와 출시명은 **Coin Survivor**로 통일합니다.
 
 팀 프로젝트 원본 전체 소스는 공개 권한이 확정되지 않았으므로 이 저장소에 복사하지 않습니다.
 
 ## One Line
 
-격자형 인벤토리와 상점 구매 흐름에서 UI preview, 실제 데이터 확정, 구매 실패 시 환불 처리를 다뤘습니다.
+격자형 인벤토리와 상점 구매 흐름에서 배치 미리보기, 실제 데이터 확정,
+구매 실패 시 환불 처리를 다뤘습니다.
 
 ## Core Responsibilities
 
 - 인벤토리 아이템 드래그, 회전, 배치 흐름
-- 배치 가능 여부 preview와 실제 데이터 변경 시점 분리
+- 배치 가능 여부 미리보기와 실제 데이터 변경 시점 분리
 - 아이템 merge/swap/restore 흐름
 - 상점 구매 시 골드 차감, 인벤토리 수령, 실패 시 환불
 - Play Mode 검증 항목과 코드/빌드 확인 수준 분리
 
-## Public Scope
+## Evidence Layers
 
-이 폴더는 공개용 설명과 핵심 파일 인덱스만 포함합니다.
+- **Release evidence**: [STOVE Coin Survivor](https://store.onstove.com/ko/games/105249)
+- **Public GitHub**: 역할, 구조, 핵심 파일 인덱스, 검증 범위
+- **Local interview evidence**: 구매·판매·배치 관련 원본 C# 코드와 최종 빌드 캡처
+
+이 폴더에는 공개용 설명과 핵심 파일 인덱스만 포함합니다.
 원본 C# 파일은 팀 공개 허가 전까지 로컬 면접 설명용으로만 사용합니다.
