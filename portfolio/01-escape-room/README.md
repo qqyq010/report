@@ -1,37 +1,24 @@
 # EscapeRoom
 
-개인 프로젝트로 진행한 단일 씬 기반 잠입/퍼즐 탈출 게임입니다.
+적의 시야를 피하고 퍼즐을 풀어 탈출하는 개인 프로젝트입니다. Unity와 C#을 사용해 게임 상태, 적 감지, 퍼즐 진행과 실패 후 복귀 흐름을 구성했습니다.
 
-## One Line
+## 주요 기능과 코드
 
-적의 시야를 피하고 퍼즐을 해결한 뒤 탈출하는 흐름을 단일 씬 안에서 구현했습니다.
+| 기능 | 코드 |
+|---|---|
+| 게임 상태와 행동 가능 여부 관리 | [GameManager](code/Core/GameManager.cs) |
+| 퍼즐 진행도와 탈출 조건 관리 | [ProgressState](code/Core/ProgressState.cs) |
+| 거리·시야각·벽 가림에 따른 적 감지 | [EnemyVision](code/Enemy/EnemyVision.cs) |
+| 감지 결과를 실패 처리로 전달 | [DetectionController](code/Enemy/DetectionController.cs) |
+| 실패 처리 중복 방지와 복구 | [FailureHandler](code/Core/FailureHandler.cs) |
+| 복귀 위치 저장과 적용 | [CheckpointManager](code/Core/CheckpointManager.cs) · [CheckpointTrigger](code/World/CheckpointTrigger.cs) |
+| 적이 확인할 플레이어 위치 | [PlayerDetectionTarget](code/Player/PlayerDetectionTarget.cs) |
+| Treasure 퍼즐의 진행과 실패 조건 | [TreasureGridManager](code/Puzzle/TreasureGridManager.cs) · [TreasureEnemy](code/Puzzle/TreasureEnemy.cs) |
 
-## Public Code
+## 작업에서 살펴본 점
 
-| File | Role |
-| --- | --- |
-| `code/Core/GameManager.cs` | 게임 상태와 진행도 접근점 관리 |
-| `code/Core/ProgressState.cs` | 퍼즐 클리어, Phase2, Exit unlock 상태 관리 |
-| `code/Core/FailureHandler.cs` | 실패 처리, 입력 잠금, 복귀 루틴 |
-| `code/Core/CheckpointManager.cs` | 체크포인트 저장과 플레이어 복귀 |
-| `code/Enemy/EnemyVision.cs` | 적 시야 감지와 line-of-sight 판정 |
-| `code/Enemy/DetectionController.cs` | 감지 누적과 실패 처리 연결 |
-| `code/World/CheckpointTrigger.cs` | 체크포인트 트리거 |
-| `code/Player/PlayerDetectionTarget.cs` | 감지 대상 transform 해석 |
-| `code/Puzzle/TreasureGridManager.cs` | Treasure 퍼즐 진행과 실패 처리 |
-| `code/Puzzle/TreasureEnemy.cs` | Treasure 퍼즐 내 적 이동/충돌 처리 |
+적에게 발각된 뒤 실패 처리가 여러 번 겹치지 않도록 하고, 복귀 위치와 입력 상태를 함께 다뤘습니다. 퍼즐 진행 상태와 플레이어의 행동 상태를 나눠 각 기능의 역할을 정리했습니다.
 
-## Interview Focus
+개발 과정에서는 AI 도구를 활용했습니다. 제안된 구조와 최종 코드에 남은 구조를 대조한 내용은 [작업 과정](ai-codex-evidence.md)에 정리했습니다.
 
-- `GameManager`와 `ProgressState`를 나눈 이유
-- 감지 판정과 실패 처리를 분리한 이유
-- 실패 후 체크포인트 복귀에서 입력과 카메라 상태가 꼬이지 않게 한 방식
-- 퍼즐 진행 상태와 플레이어 행동 상태를 같은 변수로 처리하지 않은 이유
-
-## Evidence Layers
-
-- **Public GitHub**: 위 핵심 C# 코드와 구조 설명
-- **Local interview evidence**: 전체 Unity scene, prefab, Inspector binding
-- **Execution evidence**: 최종 빌드에서 감지, 퍼즐 3종, 실패 복구, 탈출 흐름을 확인한 캡처
-
-공개 코드만으로 Unity 프로젝트 전체 연결 상태까지 증명한다고 말하지 않습니다.
+[코드별 설명](evidence-source-map.md) · [기능별 코드 발췌](../../career/self_intro_upgrade_20260705_2S/scripts/project1/README.md)

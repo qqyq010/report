@@ -1,29 +1,16 @@
-# Coin Survivor Core File Index
+# 상점과 인벤토리의 주요 처리
 
-## Files To Explain In Interview
+| 처리 | 관련 파일 | 살펴본 내용 |
+|---|---|---|
+| 아이템 구매 | `ShopPurchaseService.cs` | 골드 차감, 아이템 수령, 수령 실패 시 환불 |
+| 드래그·회전·배치 | `InventoryUIController.cs` | 이동 중 표시와 실제 배치 확정 시점 |
+| 인벤토리 반영 | `InventoryRuntimeService.cs` | 구매한 아이템을 가방에 넣는 처리 |
+| 합성 | `InventoryMergeService.cs` | 합성 조건과 실행 흐름 |
 
-| File | Evidence Level | What To Explain | Public Status |
-| --- | --- | --- | --- |
-| `ShopPurchaseService.cs` | Code Evidence | 구매 트랜잭션, 골드 차감 후 인벤토리 수령 실패 시 환불 | Interview only until team approval |
-| `InventoryUIController.cs` | Code Evidence | 드래그 중 상태, 회전, 배치 미리보기, 실제 확정 분리 | Interview only until team approval |
-| `InventoryRuntimeService.cs` | Code Evidence | 구매 아이템 수령, runtime inventory 반영 | Interview only until team approval |
-| `InventoryMergeService.cs` | Code Evidence | merge 판정과 실행 책임 분리 | Interview only until team approval |
-| Project2 AI work rules | Document Evidence | GPT/Codex 역할 분리, Play Mode와 build 검증 분리 | Sanitized summary only |
-| Inventory/Shop baseline docs | Document/Log Evidence | 담당 범위와 Play Mode A-K 기록 | Sanitized summary only |
+## 이번 QA 자료와 연결되는 코드
 
-## Safe Claims
+- [획득 반경 계산](qa/code/magnet-range.cs.txt): 자석 업그레이드 비율 적용
+- [상점 진입 판단](qa/code/shop-entry.cs.txt): 누적 골드, 진입 비용과 남는 골드 확인
+- [코드 설명](qa/code/README.md)
 
-- 상점 구매 과정에서 재화 차감 후 인벤토리 수령 실패 시 환불하는 실패 경로를 고려했습니다.
-- 인벤토리 UI 미리보기와 실제 데이터 확정 시점을 분리했습니다.
-- Codex/GPT 작업 규칙을 통해 코드 확인, 빌드 확인, Play Mode 확인을 구분했습니다.
-
-## Unsafe Claims
-
-- 팀 프로젝트 전체 인벤토리 시스템을 혼자 전부 만들었다.
-- Codex가 Play Mode를 직접 검증했다.
-- 팀 소스 전체를 공개해도 된다.
-
-## GitHub Strategy
-
-공개 저장소에는 원본 팀 소스 대신 이 인덱스와 면접 설명 포인트를 둡니다.
-팀 공개 허가가 확인되면 핵심 메서드 일부만 별도 excerpt로 추가합니다.
+[프로젝트 소개](README.md)

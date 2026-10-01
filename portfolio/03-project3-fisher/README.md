@@ -1,30 +1,16 @@
-# Project3 Fisher
+# Fisher
 
-팀 프로젝트 2에서 Fisher/CSH 영역과 AI-assisted workflow를 정리한 공개용 문서입니다.
+Unity를 사용한 방치형 RPG 팀 프로젝트입니다. 담당 영역에서 상점, 가방, 요리, 도감의 화면과 데이터 처리 흐름을 정리했습니다.
 
-## One Line
+## 맡은 작업
 
-인벤토리, 상점, PlayFab 연동 경계, 검증 큐, AI/Codex 기반 작업 운영 흐름을 문서와 로그로 관리했습니다.
+- 재화와 아이템을 바꾸는 요청과 화면에 결과를 반영하는 흐름 정리
+- 요청 중 중복 입력, 실패 응답과 시간 초과 시 화면 상태 처리 기준 정리
+- 밸런스 시트와 데이터 변환·검사 과정 정리
+- AI 도구를 활용한 코드 분석과 작업 문서 정리
 
-## Evidence Layers
+## 작업 사례
 
-- **Public GitHub**: 구조, 검증 기준, 공개 범위, 핵심 파일 인덱스
-- **Local interview evidence**: `FisherServerMutationGate.cs`,
-  `FisherPlayerDataBridge.cs`, 4개 Panel Adapter, 밸런스 워크북과 생성 CSV
-- **Execution evidence**: 최종 빌드의 Shop, Cooking, Bag, Collection 흐름
+상점에서 구매 버튼을 누른 시점과 서버 결과가 돌아오는 시점을 나눠 다뤘습니다. 요청 중 표시 상태와 결과를 받은 뒤 데이터 반영, 실패 시 화면을 복구하는 흐름을 정리했습니다.
 
-이 폴더에는 원본 팀 소스나 PlayFab 설정을 넣지 않습니다.
-대신 핵심 파일 인덱스와 검증 범위를 정리합니다.
-
-## Main Topics
-
-- 클라이언트 요청과 서버 결과 반영 분리
-- 실패 시 UI lock 회복과 서버 데이터 refresh
-- current-truth 문서와 historical log 분리
-- Play Mode, build, code evidence, live proof 구분
-- AI 도구의 제안과 실제 코드·실행 근거를 구분
-
-## Caveat
-
-정적 검사와 최종 빌드 확인을 PlayFab live 성공과 같은 말로 사용하지 않습니다.
-BM 실행과 실제 과금 구현도 이 폴더에서 완료 주장으로 사용하지 않습니다.
+[화면과 데이터 처리](evidence-source-map.md) · [관련 파일의 역할](core-file-index.md) · [밸런스와 작업 확인](tools-and-verification.md) · [AI 도구 활용](ai-assisted-workflow.md)

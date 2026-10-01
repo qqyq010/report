@@ -1,29 +1,13 @@
-# Project3 Fisher Core File Index
+# 관련 파일의 역할
 
-## Files To Explain In Interview
+| 파일 | 역할 |
+|---|---|
+| `InventoryService.cs` | 아이템 수량, 가방 용량과 재화 데이터 처리 |
+| `ShopService.cs` | 상품 구매 조건과 지급·환불 흐름 |
+| `FisherPlayerDataBridge.cs` | 화면 요청과 서버 응답 데이터 연결 |
+| `FisherServerMutationGate.cs` | 중복 요청, 요청 식별과 시간 초과 처리 |
+| `ShopPanelAdapter.cs` | 상점 화면의 요청과 결과 연결 |
+| `BagPanelAdapter.cs` | 가방 화면의 판매·사용 요청 연결 |
+| `CookingPanelAdapter.cs` | 요리 화면의 요청과 결과 연결 |
 
-| File | Evidence Level | What To Explain | Public Status |
-| --- | --- | --- | --- |
-| `InventoryService.cs` | Code Evidence | inventory snapshot, stack count, validation, capacity/overflow handling | Interview only until team approval |
-| `ShopService.cs` | Code Evidence | shop item validation, reward apply, refund on reward failure | Interview only until team approval |
-| `FisherServerMutationGate.cs` (type: `FisherServerRequestGate`) | Code Evidence | 중복 요청 차단, 요청 식별자, 시간 초과와 오래된 응답 무효화 | Interview only until team approval |
-| `FisherPlayerDataBridge.cs` | Code Evidence | PlayFab gateway request, mutation result handling, rejected mutation refresh | Interview only until team approval |
-| `ShopPanelAdapter.cs` | Code Evidence | server-authority purchase UI, pending state, timeout/failure recovery | Interview only until team approval |
-| `BagPanelAdapter.cs` | Code Evidence | sell/use-box request and pending state handling | Interview only until team approval |
-| `CookingPanelAdapter.cs` | Code Evidence | cooking request, speed-up request, UI recovery | Interview only until team approval |
-| `docs/current` current-truth docs | Document Evidence | 현재 기준, 미검증 항목, team ownership 분리 | Sanitized summary only |
-| `docs/handoff` verification queue | Document Evidence | Play Mode/live proof queue | Sanitized summary only |
-| `tools/checker/validator` | Tool Evidence | markdown, token, balance, data contract local checks | Public summary or sanitized scripts |
-
-## Safe Claims
-
-- PlayFab 연동 경계에서 클라이언트 요청, 서버 결과 반영, 실패 복구 흐름을 분리했습니다.
-- live PlayFab 성공 여부는 코드 구현과 별개로 검증 큐에 남겼습니다.
-- BM/gacha/package는 후보와 보류 조건을 문서화했으며, 실행 완료로 말하지 않습니다.
-
-## Unsafe Claims
-
-- PlayFab 연동을 완료했다.
-- BM을 구현했다.
-- 서버/CloudScript/TitleData까지 모두 검증했다.
-- 팀 전체 Fisher 시스템을 혼자 구현했다.
+[화면과 데이터 처리](evidence-source-map.md) · [프로젝트 소개](README.md)
